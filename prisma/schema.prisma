@@ -1,0 +1,95 @@
+// Este archivo se crea automaticamente al instalar prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+// Modelos
+// Usuarios
+model User {
+  // Debido a MongoDB todos los modelos van a tener un id definidos de la siguiente manera
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  name String?
+  email String? @unique
+  emailVerified DateTime?
+  image String?
+  hashedPassword String?
+  favoriteIds String[] @db.ObjectId
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relaciones
+  accounts Account[]
+  listings Listing[]
+  reservations Reservation[]
+}
+
+// Cuentas (Gmail o Github)
+model Account {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  type String
+  provider String
+  providerAccountId String
+  refresh_token String? @db.String
+  access_token String? @db.String
+  expires_at Int?
+  token_type String?
+  scope String?
+  id_token String? @db.String
+  session_state String?
+
+  // Relaciones
+  userId String @db.ObjectId
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+// Listing
+model Listing {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  title String
+  description String
+  imageSrc String
+  category String
+  roomCount String
+  bathroomCount String
+  guestCount String
+  locationValue String
+  price Int
+
+  createdAt DateTime @default(now())
+
+  // Relaciones
+  userId String @db.ObjectId
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  reservations Reservation[]
+}
+
+// Reservas
+model Reservation {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  startDate DateTime
+  endDate DateTime
+  totalPrice Int
+
+  createdAt DateTime @default(now())
+
+  // Relaciones
+  userId String @db.ObjectId
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  listingId String @db.ObjectId
+  listing Listing @relation(fields: [listingId], references: [id], onDelete: Cascade)
+}
