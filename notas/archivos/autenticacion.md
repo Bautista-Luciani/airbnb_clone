@@ -51,4 +51,3 @@
       - Definimos la vde *GOOGLE_CLIENT_SECRET* y su valor va a ser el ClientSecret que nos da google
     - Usamos el metodo signIn("google") para registrarse con google ► `components/modals/RegisterModal.tsx`
     - Usamos el metodo signIn("google") para ingresar con google ► `components/modals/LoginModal.tsx`
-12. xwww
