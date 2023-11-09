@@ -42,4 +42,13 @@
 
 ## CARDS
 1. Envolvemos el children en un div ► `app/layout`
-2. 
+2. Trabajamos en el archivo `app/page.tsx` que es donde vamos a mostrar las cards
+3. Creamos el componente *EmptyState* ► `components/EmptyState.tsx`
+4. Usamos el EmptyState en el *Home* ► `app/page.tsx`
+5. Creamos una accion *getListings* para obtener los listings ► `actions/getListings.ts`
+6. Usamos el getListings en el *Home* ► `app/page.tsx`
+7. Instalamos date-fns ► npm i date-fns
+8. Creamos el componente *ListingCard* ► `components/listings/ListingCard.tsx`
+9. Creamos el componente *HeartButton* ► `components/HeartButton.tsx`
+10. Usamos el HeartButton en el *ListingCard* ► `components/listings/ListingCard.tsx`
+11. Usamos el ListingCard en el *Home* ► `app/page.tsx`
