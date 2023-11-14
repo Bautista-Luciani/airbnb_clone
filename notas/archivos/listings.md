@@ -57,3 +57,20 @@
 1. Creamos el endpoint para agregar y eliminar los favoritos ► `app/api/listings/[listingId]/route.ts`
 2. Creamos el hook para agregar o eliminar los favoritos ► `hooks/useFavorite.ts`
 3. Usamos el hook para que se ejecute al hacer click en el corazon ► `components/HeartButton.tsx`
+
+## INDIVIDUAL LISTING
+<!-- Antes que nada, para arreglar un warning -->
+1. En *getListing* cambiamos el return del listings por el de safeListings ► `actions/getListing.ts`
+2. Creamos el type *SafeListing* ► `types/index.ts`
+3. Utilizamos el *SafeListing* como interface en el ListingCard ► `components/listings/ListingCard.tsx`
+<!-- Ahora si, trabajamos con el individual listing -->
+1. Creamos la accion *getListingById* ► `actions/getListingById.ts`
+2. Creamos la pagina de cada listing individual ► `app/listings/[listingId]/page.tsx`
+3. Creamos el componente *ListingClient* ► `components/listings/ListingClient.tsx`
+4. Usamos el ListingClient en la pagina de cada listing individual ► `app/listings/[listingId]/page.tsx`
+5. Creamos el componente *ListingHead* ► `components/listings/ListingHead.tsx`
+6. Usamos el ListingHead en el *ListingClient* ► `components/listings/ListingClient.tsx`
+7. Creamos el componente *ListingInfo* ► `components/listings/ListingInfo.tsx`
+8. Usamos el ListingInfo en el *ListingClient* ► `components/listings/ListingClient.tsx`
+9. Creamos el componente *ListingCategory* ► `components/listings/ListingCategory.tsx`
+10. Usamos el ListingCategory en el *ListingInfo* ► `components/listings/ListingInfo.tsx`
