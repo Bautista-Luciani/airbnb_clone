@@ -61,9 +61,9 @@ model Listing {
   description String
   imageSrc String
   category String
-  roomCount String
-  bathroomCount String
-  guestCount String
+  roomCount Int
+  bathroomCount Int
+  guestCount Int
   locationValue String
   price Int
 
