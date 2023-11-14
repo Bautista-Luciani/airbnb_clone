@@ -1,4 +1,8 @@
-import { User } from '@prisma/client';
+import { Listing, User } from '@prisma/client';
+
+export type SafeListing = Omit<Listing, "createdAt"> & {
+    createdAt: string
+}
 
 /*  Creamos este type ya que en el getCurrentUser cambiamos los tipos de las propiedades DateTime del User por string
 Entonces para evitar errores en el Navbar al pasar el getCurrentUser() creamos este type que es igual a User,
