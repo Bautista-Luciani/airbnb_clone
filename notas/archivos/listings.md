@@ -62,7 +62,7 @@
 <!-- Antes que nada, para arreglar un warning -->
 1. En *getListing* cambiamos el return del listings por el de safeListings ► `actions/getListing.ts`
 2. Creamos el type *SafeListing* ► `types/index.ts`
-3. Utilizamos el *SafeListing* como interface en el ListingCard ► `components/listings/ListingCard.tsx`
+3. Usamos el *SafeListing* como interface en el ListingCard ► `components/listings/ListingCard.tsx`
 <!-- Ahora si, trabajamos con el individual listing -->
 1. Creamos la accion *getListingById* ► `actions/getListingById.ts`
 2. Creamos la pagina de cada listing individual ► `app/listings/[listingId]/page.tsx`
@@ -74,3 +74,23 @@
 8. Usamos el ListingInfo en el *ListingClient* ► `components/listings/ListingClient.tsx`
 9. Creamos el componente *ListingCategory* ► `components/listings/ListingCategory.tsx`
 10. Usamos el ListingCategory en el *ListingInfo* ► `components/listings/ListingInfo.tsx`
+
+## RESERVATIONS
+1. En el componente *ListingClient*:
+   - Definimos la constante *initialDataRange*
+   - Definimos reservations como un arreglo vacio al pasarlo en las props
+   - Definimos la constante *disabledDates*
+   - Definimos la constante *onCreateReservation*
+   - Creamos el useEffect para definir el precio
+2. Instalamos react-date-range ► npm i react-date-range
+3. Instalamos los types de react-date-range ► npm i -D @types/react-date-range
+4. Creamos el componente *ListingReservation* ► `components/listings/ListingReservation.tsx`
+5. Usamos el ListingReservation en el *ListingClient* ► `components/listings/ListingClient.tsx`
+6. Creamos el componente *Calendar* ► `components/inputs/Calendar.tsx`
+7. Agregamos las clases *rdrMonth* y *rdrCalendarWrapper* al `app/globals.css`
+8. Usamos el Calendar en el *ListingReservation* ► `components/listings/ListingReservation.tsx`
+9. Creamos el endpoint para crear reservas ► `app/api/reservations/route.ts`
+10. Creamos la accion *getReservations* ► `actions/getReservations.ts`
+11. Usamos la accion en *ListingIdPage* ► `app/listings/[listingId]/page.tsx`
+12. Creamos el type *SafeReservation* ► `types/index.ts`
+13. Usamos el *SafeReservation* como interface en el *ListingIdPage* ► `app/listings/[listingId]/page.tsx`
