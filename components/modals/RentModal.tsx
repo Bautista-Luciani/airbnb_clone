@@ -187,7 +187,6 @@ const RentModal = () => {
                     value={bathroomCount}
                     onChange={(value) => setCustomValue("bathroomCount", value)}
                 />
-                <hr />
             </div>
         )
     }
