@@ -1,7 +1,7 @@
 ## DEPLOY
 1. En la terminal corremos el comando *npm run lint* para asegurarnos de que no haya ningun error, los warnings no pasa nada
 2. Subimos todo al repositorio
-3. Vamos a []
+3. Vamos a Vercel
 4. Tocamos en *Add new* → *Project*
 5. Importamos el repositorio
 6. Definimos un nombre (que no diga airbnb porque nos puede lanzar un error por plagio)
