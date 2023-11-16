@@ -54,7 +54,7 @@
 11. Usamos el ListingCard en el *Home* ► `app/page.tsx`
 
 ## FAVORITES
-1. Creamos el endpoint para agregar y eliminar los favoritos ► `app/api/listings/[listingId]/route.ts`
+1. Creamos el endpoint para agregar y eliminar los favoritos ► `app/api/favorites/[listingId]/route.ts`
 2. Creamos el hook para agregar o eliminar los favoritos ► `hooks/useFavorite.ts`
 3. Usamos el hook para que se ejecute al hacer click en el corazon ► `components/HeartButton.tsx`
 
