@@ -1,3 +1,40 @@
+# Airbnb Clone - Accommodation Application
+
+This project is an Airbnb clone that utilizes modern technologies to provide an accommodation booking experience similar to the original platform. The application has been built using the following tools and technologies:
+
+## Technologies Used
+
+### Frontend
+- **Next.js 13:** React framework for building the application's frontend. Provides server-side rendering, routing, and other powerful features.
+- **Tailwind CSS:** A first-class utility framework for rapidly creating responsive and customizable user interfaces.
+- **Next Auth:** A library for handling authentication with different authentication providers.
+
+### Backend
+- **Prisma:** Modern and powerful ORM (Object-Relational Mapping) that facilitates interaction with the database.
+- **MongoDB:** Flexible and scalable NoSQL database used for storing application data.
+
+## Key Features
+
+### Registration and Authentication
+The application allows users to register and authenticate using Next Auth. It supports multiple authentication providers such as Google and Github.
+
+### Search and Accommodation Visualization
+Users can search and explore different available accommodations. Additionally, users can filter by categories, dates, location, number of rooms, among other things. The application offers a user-friendly interface that displays details, images, and features of each property.
+
+### Users
+Users can create listings for their properties. Additionally, the application features different pages that allow users to view their trips, bookings, properties, and favorites.
+
+### Accommodation Booking
+Authenticated users can make accommodation bookings based on availability provided by hosts.
+
+## Additional Notes
+
+This project is for educational and learning purposes only. It is not affiliated with or endorsed by Airbnb in any way.
+
+
+***
+***
+
 # Clon de Airbnb - Aplicación de Alojamiento
 
 Este proyecto es un clon de Airbnb que utiliza tecnologías modernas para brindar una experiencia de reserva de alojamiento similar a la plataforma original. La aplicación ha sido construida utilizando las siguientes herramientas y tecnologías:
